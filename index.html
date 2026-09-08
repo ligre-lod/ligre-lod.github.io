@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LiGre — Linking Greek</title>
+  <meta
+    name="description"
+    content="LiGre is a linked open data resource publishing lemmatized Ancient Greek vocabulary as interlinked RDF data."
+  />
+  <link rel="icon" href="assets/logo.png" />
+  <style>
+    :root {
+      --primary: #1976d2;
+      --primary-dark: #1565c0;
+      --bg: #ffffff;
+      --bg-alt: #f7f8fa;
+      --text: #1a1a1a;
+      --text-secondary: #55606b;
+      --border: #e2e5e9;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #90caf9;
+        --primary-dark: #64b5f6;
+        --bg: #121212;
+        --bg-alt: #1a1a1a;
+        --text: #f0f0f0;
+        --text-secondary: #b0b8bf;
+        --border: #2e2e2e;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .brand img {
+      width: 32px;
+      height: 32px;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 5rem 1.5rem 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.75rem;
+    }
+
+    .hero p.tagline {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      margin: 0 0 0.5rem;
+    }
+
+    .hero p.welcome {
+      color: var(--text-secondary);
+      margin: 0 0 2rem;
+    }
+
+    .cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    main {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      background: var(--bg-alt);
+    }
+
+    .card h2 {
+      margin: 0 0 1rem;
+      font-size: 1.25rem;
+    }
+
+    .card p {
+      margin: 0 0 1rem;
+      color: var(--text-secondary);
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .card a.more {
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">
+      <img src="assets/logo.png" alt="LiGre logo" />
+      LiGre
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="https://ligre-lod.github.io/query-interface/">Search</a>
+      <a href="https://github.com/ligre-lod" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>LiGre</h1>
+    <p class="tagline">A Lemma Bank for Ancient Greek via Linked Data</p>
+    <p class="welcome">Welcome to the home of LiGre &mdash; Linking Greek.</p>
+    <div class="cta-group">
+      <a class="btn btn-primary" href="https://ligre-lod.github.io/query-interface/">
+        Search the Lemma Bank
+      </a>
+      <a class="btn btn-secondary" href="https://lila-erc.eu/" target="_blank" rel="noopener noreferrer">
+        About LiLa &#8599;
+      </a>
+    </div>
+  </section>
+
+  <main>
+    <div class="sections">
+      <div class="card">
+        <h2>About</h2>
+        <p>
+          LiGre is a linked open data resource that publishes lemmatized
+          Ancient Greek vocabulary as structured, interlinked RDF data. Each
+          lemma is modeled using the
+          <a href="https://www.w3.org/community/ontolex/" target="_blank" rel="noopener noreferrer">OntoLex-Lemon</a>
+          vocabulary and the
+          <a href="https://lila-erc.eu/" target="_blank" rel="noopener noreferrer">LiLa</a>
+          <code>Lemma</code> class, so Ancient Greek lemmas can be published,
+          queried, and linked following the same conventions as the broader
+          Linked Data knowledge base built for Latin by the LiLa project.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Data</h2>
+        <p>
+          The Lemma Bank is exposed as RDF through a SPARQL endpoint, and
+          individual lemmas can be browsed as Linked Data resources via
+          LodView. Use the query interface to search and filter the lemma
+          bank directly.
+        </p>
+        <a class="more" href="https://ligre-lod.github.io/query-interface/">
+          Search the Lemma Bank &rarr;
+        </a>
+      </div>
+
+      <div class="card">
+        <h2>Output</h2>
+        <p>
+          The design and rationale behind LiGre are described in
+          <em>&ldquo;From Lemmas to Links: A Lemma Bank for Ancient Greek&rdquo;</em>,
+          Swaelens, C., Mambrini, F., &amp; Passarotti, M. (2026), Language
+          Technology for Historical and Ancient Languages (LT4HALA), ELRA
+          Language Resources Association.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    LiGre is developed at Ghent University. Source and toolkit on
+    <a href="https://github.com/ligre-lod" target="_blank" rel="noopener noreferrer">GitHub</a>.
+  </footer>
+</body>
+</html>
